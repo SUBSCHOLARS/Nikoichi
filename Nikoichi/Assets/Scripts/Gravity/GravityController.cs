@@ -7,6 +7,7 @@ public class GravityController : MonoBehaviour
     public float forceStreength = 100.0f;
     private Rigidbody2D rb2D;
     private Camera mainCamera;
+    public static bool isGravityEnabled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class GravityController : MonoBehaviour
         //マウスの左ボタンが長押しされている間だけ処理を行う
         if (Input.GetMouseButton(0))
         {
+            isGravityEnabled = true;
             //1. マウスの座標をワールド座標に変換
             Vector3 mouseScreenPos = Input.mousePosition;
             //Z座標はカメラからの距離なので、適当な値を入れる
@@ -30,6 +32,10 @@ public class GravityController : MonoBehaviour
             Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
             //3. 計算した方向に力を加える
             rb2D.AddForce(direction * forceStreength * Time.deltaTime);
+        }
+        else
+        {
+            isGravityEnabled = false;
         }
     }
 }

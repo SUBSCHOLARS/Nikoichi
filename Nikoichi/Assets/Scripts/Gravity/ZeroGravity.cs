@@ -17,11 +17,18 @@ public class ZeroGravity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //sin波を計算して新しいY座標を求める
-        //Time.timeを用いることで滑らかな運動を実現する
-        float newY = startY + Mathf.Sin(Time.time * floatSpeed) * floatAmplitude;
+        if (!GravityController.isGravityEnabled)
+        {
+            //sin波を計算して新しいY座標を求める
+            //Time.timeを用いることで滑らかな運動を実現する
+            float newY = startY + Mathf.Sin(Time.time * floatSpeed) * floatAmplitude;
 
-        //オブジェクトのY座標を更新
-        transform.position = new Vector2(transform.position.x, newY);   
+            //オブジェクトのY座標を更新
+            transform.position = new Vector2(transform.position.x, newY);
+        }
+        else
+        {
+            float currentPosition = transform.position.y;
+        }
     }
 }
