@@ -14,10 +14,9 @@ public class ResetButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    public void onReset()
-    {
-        otherPart.transform.position = new Vector2(5, -2);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            otherPart.transform.position = new Vector2(5, -2);
+        }
     }
 }
