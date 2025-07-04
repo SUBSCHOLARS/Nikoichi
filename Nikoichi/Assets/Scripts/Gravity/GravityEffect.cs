@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(LineRenderer))]
 public class GravityEffect : MonoBehaviour
@@ -28,6 +29,9 @@ public class GravityEffect : MonoBehaviour
         mainCamera = Camera.main;
         //頂点数を設定
         lineRenderer.positionCount = segments;
+        // このレンダラーが使用するマテリアルのレンダーキューを
+        // 「Overlay（UIなどが使う描画順）」に設定する
+        GetComponent<Renderer>().material.renderQueue = (int)RenderQueue.Overlay;
     }
     //LateUpdateを使うことで、全Update処理が終わった後に処理を呼び出すことが可能になり、カーソルの追従が可能になる。
     void LateUpdate()
