@@ -8,10 +8,11 @@ public class FitDetector : MonoBehaviour
     [SerializeField] private float fitDistanceThreshold = 0.1f;
     //どのくらい遅ければ止まったとみなすかの速度
     [SerializeField] private float fitVelocityThreshold = 0.1f;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +33,9 @@ public class FitDetector : MonoBehaviour
             //二つの条件を満たしたらハマったと判定する
             if (isSlowEnough && isCloseEnough)
             {
+                //結合したような演出
+                audioSource.Play();
+                other.gameObject.transform.SetParent(transform);
                 Debug.Log("フィットした！クリア！");
             }
         }
