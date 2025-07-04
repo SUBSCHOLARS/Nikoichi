@@ -1127,8 +1127,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 372776848}
-  selectedCommands:
-  - {fileID: 372776856}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1871,7 +1870,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8b4fd50f094f6426387aa22ed3f81b15, type: 3}
-  m_Color: {r: 0.377136, g: 0.4973248, b: 0.7075472, a: 1}
+  m_Color: {r: 0.48602706, g: 0.60607594, b: 0.8113208, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
