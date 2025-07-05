@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //窪みにハマったことを検知するスクリプトです。
 public class FitDetector : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class FitDetector : MonoBehaviour
                 //結合したような演出
                 audioSource.Play();
                 other.gameObject.transform.SetParent(transform);
+                SceneManager.LoadSceneAsync("GameClear");
                 Debug.Log("フィットした！クリア！");
             }
         }

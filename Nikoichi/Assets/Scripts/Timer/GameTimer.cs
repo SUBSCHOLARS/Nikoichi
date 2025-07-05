@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI; // For standard UI
 // using TMPro; // If you're using TextMeshPro
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class GameTimer : MonoBehaviour
         {
             elapsedTime -= Time.deltaTime;
             UpdateTimerUI();
+            if (elapsedTime <= 0)
+            {
+                SceneManager.LoadSceneAsync("GameOver");
+            }
         }
     }
 

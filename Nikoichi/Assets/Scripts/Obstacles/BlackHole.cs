@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlackHole : MonoBehaviour
 {
@@ -32,5 +33,6 @@ public class BlackHole : MonoBehaviour
     protected virtual void OnContact(GameObject obj)
     {
         Destroy(obj);
+        SceneManager.LoadSceneAsync("GameOver");
     }
 }
