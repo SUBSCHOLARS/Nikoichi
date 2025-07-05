@@ -1159,6 +1159,7 @@ GameObject:
   - component: {fileID: 372776875}
   - component: {fileID: 372776874}
   - component: {fileID: 372776876}
+  - component: {fileID: 372776877}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1193,7 +1194,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 372776848}
   selectedCommands:
-  - {fileID: 372776876}
+  - {fileID: 372776877}
   variables: []
   description: 
   stepPause: 0
@@ -1283,6 +1284,7 @@ MonoBehaviour:
   - {fileID: 372776868}
   - {fileID: 372776867}
   - {fileID: 372776875}
+  - {fileID: 372776877}
   suppressAllAutoSelections: 0
 --- !u!114 &372776850
 MonoBehaviour:
@@ -1914,6 +1916,23 @@ MonoBehaviour:
   targetObject: {fileID: 11061918}
   methodName: RedScreenAudiSourceControll
   delay: 0
+--- !u!114 &372776877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372776845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  targetObject: {fileID: 1646464009}
+  methodName: ToTheSampleScene
+  delay: 0
 --- !u!1 &436561508
 GameObject:
   m_ObjectHideFlags: 1
@@ -2514,6 +2533,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604214940}
   m_CullTransparentMesh: 1
+--- !u!1 &1646464009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1646464010}
+  - component: {fileID: 1646464011}
+  m_Layer: 0
+  m_Name: ToTheSampleScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1646464010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646464009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.176419, y: 8.653929, z: -0.11927092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1646464011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646464009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b331f3671f6547179e52b7984804364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1911577799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,3 +2830,4 @@ SceneRoots:
   - {fileID: 585931554}
   - {fileID: 1177830903}
   - {fileID: 11061920}
+  - {fileID: 1646464010}
