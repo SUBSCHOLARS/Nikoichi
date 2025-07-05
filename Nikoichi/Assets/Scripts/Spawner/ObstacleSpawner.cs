@@ -5,7 +5,7 @@ using UnityEngine;
 public struct WeightedObstacle
 {
     public GameObject prefab;
-    public float weight; // likelihood (e.g., 10, 30, 60)
+    public float weight;
 }
 
 public class ObstacleSpawner : MonoBehaviour
@@ -26,8 +26,7 @@ public class ObstacleSpawner : MonoBehaviour
         float screenHeight = Mathf.Abs(mainCamera.ViewportToWorldPoint(new Vector3(0, 1)).y - mainCamera.ViewportToWorldPoint(new Vector3(0, 0)).y);
         float screenArea = screenWidth * screenHeight;
 
-        numberOfObstacles = Mathf.FloorToInt(screenArea * 0.05f); // adjust for density
-        Debug.Log("Spawning " + numberOfObstacles + " obstacles based on screen area.");
+        numberOfObstacles = Mathf.FloorToInt(screenArea * 0.05f);
 
         SpawnObstaclesInView();
     }
@@ -52,7 +51,7 @@ public class ObstacleSpawner : MonoBehaviour
             }
         }
 
-        return weightedObstacles[0].prefab; // Fallback
+        return weightedObstacles[0].prefab;
     }
 
     void SpawnObstaclesInView()
@@ -60,13 +59,11 @@ public class ObstacleSpawner : MonoBehaviour
         int spawned = 0;
         int maxAttempts = 500;
 
-        // Camera bounds
         Vector2 min = mainCamera.ViewportToWorldPoint(new Vector3(0, 0));
         Vector2 max = mainCamera.ViewportToWorldPoint(new Vector3(1, 1));
         float centerX = (min.x + max.x) / 2f;
         float centerY = (min.y + max.y) / 2f;
 
-        // Guarantee at least one of each prefab spawns
         List<GameObject> mustSpawn = new List<GameObject>();
         foreach (var entry in weightedObstacles)
         {
@@ -81,7 +78,6 @@ public class ObstacleSpawner : MonoBehaviour
                 Random.Range(min.y, max.y)
             );
 
-            // Skip top-left quadrant
             if (randomPos.x < centerX && randomPos.y > centerY)
             {
                 maxAttempts--;
@@ -109,11 +105,6 @@ public class ObstacleSpawner : MonoBehaviour
             usedPositions.Add(randomPos);
             spawned++;
             maxAttempts--;
-        }
-
-        if (mustSpawn.Count > 0)
-        {
-            Debug.LogWarning("Some prefabs couldn't be spawned due to space limits.");
         }
     }
 
