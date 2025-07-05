@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WhiteHole : MonoBehaviour
 {
-    public float repulsionStrength = 100f;
+    public float repulsionStrength = 500f;
 
     void Update()
     {
@@ -13,7 +13,7 @@ public class WhiteHole : MonoBehaviour
             Rigidbody2D rb2D = obj.GetComponent<Rigidbody2D>();
             if (rb2D != null)
             {
-                Vector2 direction = (obj.transform.position - transform.position).normalized; // Reverse direction to push away
+                Vector2 direction = (obj.transform.position - transform.position).normalized;
                 float distance = Vector2.Distance(transform.position, obj.transform.position);
 
                 float repulsionForce = repulsionStrength / (distance * distance);

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BlackHole : MonoBehaviour
 {
-    public float gravityStrength = 100f;
+    public float gravityStrength = 500f;
     public float eventHorizonRadius = 1f;
 
     void Update()
