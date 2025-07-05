@@ -6,14 +6,14 @@ public class GameTimer : MonoBehaviour
 {
     public Text timerText;
 
-    private float elapsedTime = 0f;
+    public static float elapsedTime = 120f;
     private bool isRunning = true;
 
     void Update()
     {
         if (isRunning)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime -= Time.deltaTime;
             UpdateTimerUI();
         }
     }
