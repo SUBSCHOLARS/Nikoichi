@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class WormHoleInYoloBro : BlackHole
 {
-    public GameObject wormHoleOut;
+    private GameObject wormHoleOut;
+
+    void Start()
+    {
+        if (wormHoleOut == null)
+        {
+            wormHoleOut = GameObject.FindWithTag("WormHoleOut");
+
+            if (wormHoleOut == null)
+            {
+                Debug.LogWarning("No GameObject with tag 'WormHoleOut' found in scene.");
+            }
+        }
+    }
+
     protected override void OnContact(GameObject obj)
     {
-        // Custom behavior for wormhole
-        Debug.Log("Object entered wormhole: " + obj.name);
+        if (wormHoleOut != null)
+        {
+            Debug.Log("Object entered wormhole: " + obj.name);
+            obj.transform.position = obj.transform.position = new Vector3(
+            wormHoleOut.transform.position.x,
+            wormHoleOut.transform.position.y,
+                0); // force z = 0
 
-        // Example: teleport somewhere instead of destroying
-        obj.transform.position = new Vector3(wormHoleOut.transform.position.x, wormHoleOut.transform.position.y, 0); // Teleport to some location
-
-        // Optionally: base.OnContact(obj); if you still want default destruction
+        }
+        else
+        {
+            Debug.LogWarning("WormHoleOut not set or not found. Cannot teleport object.");
+        }
     }
 }
