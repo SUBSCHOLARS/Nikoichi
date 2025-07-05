@@ -2376,7 +2376,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 116.87018
-    y: 132.24117
+    y: 133.81349
     width: 105.0314
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2418,7 +2418,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &372776885
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &372776886
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2452,7 +2452,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &372776887
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2469,7 +2469,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &372776888
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2486,7 +2486,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &372776889
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2503,7 +2503,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &372776890
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &372776891
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2537,7 +2537,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &372776892
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

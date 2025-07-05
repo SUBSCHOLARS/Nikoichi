@@ -1,10 +1,11 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Planet : MonoBehaviour
 {
     public string targetTag = "OtherPart";
     public float baseGravityStrength = 0.2f;
-    public float minSize = 1.5f;
+    public float minSize = 2.0f;
     public float maxSize = 3f;
 
     private float gravityStrength;
@@ -18,10 +19,11 @@ public class Planet : MonoBehaviour
         Debug.Log("GravityStrength: " + gravityStrength);
     }
 
+
     void Update()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag(targetTag);
-        
+
         foreach (GameObject obj in objects)
         {
             Rigidbody2D rb2D = obj.GetComponent<Rigidbody2D>();

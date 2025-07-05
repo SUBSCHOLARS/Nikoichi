@@ -23,9 +23,14 @@ public class BlackHole : MonoBehaviour
 
                 if (distance <= eventHorizonRadius)
                 {
-                    Destroy(obj);
+                    OnContact(obj);
                 }
             }
         }
+    }
+
+    protected virtual void OnContact(GameObject obj)
+    {
+        Destroy(obj);
     }
 }
