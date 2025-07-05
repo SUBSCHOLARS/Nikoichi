@@ -15,7 +15,7 @@ public class TimeSet : MonoBehaviour
     {
 
     }
-    public void NotConfidet()
+    public void NotConfident()
     {
         GameTimer.elapsedTime = 180f;
     }
