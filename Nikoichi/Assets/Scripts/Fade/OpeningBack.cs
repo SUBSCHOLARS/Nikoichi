@@ -18,6 +18,6 @@ public class OpeningBack : MonoBehaviour
     }
     public void OpeningBacker()
     {
-        SceneManager.LoadSceneAsync("Opening");
+        SceneManager.LoadSceneAsync("OpeningAfterSecond");
     }
 }

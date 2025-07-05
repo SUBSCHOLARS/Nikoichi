@@ -8,7 +8,7 @@ public class FitDetector : MonoBehaviour
     //どのくらい近づけばハマったとみなすかの距離
     [SerializeField] private float fitDistanceThreshold = 0.1f;
     //どのくらい遅ければ止まったとみなすかの速度
-    [SerializeField] private float fitVelocityThreshold = 0.1f;
+    [SerializeField] private float fitVelocityThreshold = 0.4f;
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -36,8 +36,9 @@ public class FitDetector : MonoBehaviour
             {
                 //結合したような演出
                 audioSource.Play();
+                other.gameObject.transform.position = new Vector3(-6.3f, 3.68f, 0);
                 other.gameObject.transform.SetParent(transform);
-                SceneManager.LoadSceneAsync("GameClear");
+                SceneManager.LoadSceneAsync("ClearScene");
                 Debug.Log("フィットした！クリア！");
             }
         }
