@@ -1468,6 +1468,8 @@ GameObject:
   - component: {fileID: 372776885}
   - component: {fileID: 372776890}
   - component: {fileID: 372776889}
+  - component: {fileID: 372776891}
+  - component: {fileID: 372776892}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1500,9 +1502,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 372776882}
+  - {fileID: 372776848}
   selectedCommands:
-  - {fileID: 372776889}
+  - {fileID: 372776892}
   variables: []
   description: 
   stepPause: 0
@@ -1586,9 +1588,11 @@ MonoBehaviour:
   - {fileID: 372776862}
   - {fileID: 372776873}
   - {fileID: 372776872}
+  - {fileID: 372776891}
   - {fileID: 372776871}
   - {fileID: 372776870}
   - {fileID: 372776869}
+  - {fileID: 372776892}
   - {fileID: 372776868}
   - {fileID: 372776867}
   - {fileID: 372776875}
@@ -1883,7 +1887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: "\u3042\u308D\u3046\u3053\u3068\u306B\u3001\u5B87\u5B99\u8239\u306E\u57FA\u5E79\u30D1\u30FC\u30C4\u304C\u4E8C\u3064\u306B\u5206\u96E2\u3057\u3066\u3057\u307E\u3063\u305F\u306E\u3060\uFF01\uFF01\uFF01\uFF01"
+  storyText: "\u3042\u308D\u3046\u3053\u3068\u306B\u3001\u885D\u6483\u306B\u3088\u3063\u3066\u30E9\u30DC\u5185\u306E\u5B87\u5B99\u8239\u306E\u57FA\u5E79\u30D1\u30FC\u30C4\u304C\u4E8C\u3064\u306B\u5206\u96E2\u3057\u3066\u3057\u307E\u3063\u305F\u306E\u3060\uFF01\uFF01\uFF01\uFF01"
   description: 
   character: {fileID: 1177830902}
   portrait: {fileID: 0}
@@ -2400,7 +2404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  storyText: "\u6B63\u76F4\u4FFA\u306F..."
+  storyText: "\u4FFA\u306F..."
   description: 
   character: {fileID: 235358682}
   portrait: {fileID: 21300000, guid: a3620bace9c4b45fe9aa3add9bf7ea12, type: 3}
@@ -2514,6 +2518,40 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 442134462}
   methodName: HighlyConfident
+  delay: 0
+--- !u!114 &372776891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372776845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  targetObject: {fileID: 119013746}
+  methodName: CameraShake
+  delay: 0
+--- !u!114 &372776892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372776845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  targetObject: {fileID: 119013746}
+  methodName: CameraShake
   delay: 0
 --- !u!1 &436561508
 GameObject:
