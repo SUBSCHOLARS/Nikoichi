@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WormHoleIn : BlackHole
+public class WormHoleInYoloBro : BlackHole
 {
     public GameObject wormHoleOut;
     protected override void OnContact(GameObject obj)
