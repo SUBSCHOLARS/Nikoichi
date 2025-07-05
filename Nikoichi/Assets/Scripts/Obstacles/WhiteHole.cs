@@ -18,6 +18,11 @@ public class WhiteHole : MonoBehaviour
 
                 float repulsionForce = repulsionStrength / (distance * distance);
 
+                if (distance <= 0.1f)
+                {
+                    repulsionForce = repulsionStrength;
+                }
+
                 rb2D.AddForce(direction * repulsionForce * Time.deltaTime);
 
             }
